@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Praticando angular</title>
+	<script src="JS/angular.min.js"></script>
+</head><!--ng-app=""-->
+<body >
+<!--
+	
+	<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+-->
+<!--<div ng-app="" ng-init="myCol='red'">
+
+<input style="background-color:{{myCol}}" ng-model="myCol">
+
+</div>-->
+<!--
+	<div ng-app="" ng-init="points=[16,6,6,44,4,4,4,4,4,4,5468,468,4,68468]">
+
+<p>The third result is {{ points[1] }}</p>
+
+</div>
+-->
+<!--
+	<div ng-app="myApp" w3-test-directive></div>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "fui creado en un constructor"
+    };
+});
+	
+</script>	
+-->
+	
+<!--
+	eventos
+<div ng-app="cont" ng-controller="myCtrl">
+
+<button ng-click="count = count + 1">Click Me!</button>
+
+<p>{{ count }}</p>
+
+</div>
+<script>
+var contar = angular.module('cont', []);
+contar.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+});
+</script>
+-->
+<!--
+	<div ng-app="">
+  <form>
+    Check to show a header:
+    <input type="checkbox" ng-model="myVar">
+  </form>
+  <h1 ng-show="myVar">apareci</h1>
+</div>
+-->
+<!--<form >
+  Pick a topic:
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="tuts">Tutorials
+  <input type="radio" ng-model="myVar" value="cars">Cars
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Cars</h1>
+     <p>Read about cars.</p>
+  </div>
+</div>-->
+	<!--validacion de campos-->
+<!--	<style>
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+</style>-->
+<!--	<form name="myForm">
+<p>Nombre  :
+<input name="myName" ng-model="myNasme" required>
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">ingrese su nombre</span>
+</p>
+
+<p>Direccion :
+<input name="myAddress" ng-model="myAddress" required>
+<span ng-show="myForm.myAddress.$touched && myForm.myAddress.$invalid">ingrse dirrecion.</span>
+</p>
+</form>-->
+	<!--inserstar lista con angualar-->
+<!--	
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<ul>
+    <li ng-repeat="x in names">{{x}}</li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+});
+</script>-->
+	
+<!--
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<table>
+  <tr ng-repeat="x in names">
+    <td>{{ x.Name }}</td>
+    <td>{{ x.Country }}</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("customers.php")
+    .then(function (response) {$scope.names = response.data.records;});
+});
+</script>-->
+	<!--opciones de selecion-->
+	<!--<div ng-app="myApp" ng-controller="myCtrl">
+
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+});
+</script>-->
+
+</body>
+</html>
